@@ -50,6 +50,7 @@ class Gamwo:
                     sys.exit(0)
 
             self.input.update()
+            self.window.fill('black')
             self._update()
             self._draw()
 
