@@ -9,6 +9,7 @@ class Entity(pygame.Rect):
         self.x = x
         self.y = y
         self.color = color
+        self.rect = self
         
     def show(self):
         if self.shape == "square" or self.shape == "rect" or self.shape == "rectangle":
@@ -19,8 +20,8 @@ class Entity(pygame.Rect):
     def checkCollision(self, second_entity):
         try:
             if type(second_entity) != list:
-                return self.colliderect(second_entity)
+                return self.colliderect(second_entity.rect)
             elif type(second_entity) == list:
-                return self.collidelistall(second_entity)
+                return self.collidelistall(second_entity.rect)
         except:
-            raise AttributeError("Gamwo.Entity.checkCollision: second_entity must be a Gamwo.Entity or a list of Gamwo.Entity")
+            raise AttributeError("Gamwo.Entity.checkCollision: second_entity must be a Gamwo.Entity or a list of Gamwo.Entity or Gamwo.Sprite or a list of Gamwo.Sprite or a list of Gamwo.Sprite") 
