@@ -5,3 +5,4 @@ Remember, there is github wiki.
 
 TODO:
   - Update wiki
+  - More examples
