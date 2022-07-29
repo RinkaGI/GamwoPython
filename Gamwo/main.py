@@ -1,5 +1,5 @@
 import pygame, sys
-from Gamwo.input import Input
+from gamwo.input import Input
 
 class Gamwo:
     '''Main class, this create a window, draw, update, detect input and more, its very important.'''
