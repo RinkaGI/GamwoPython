@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name = "gamwo-py",
-    packages = ['gamwo-py'],
-    version = '0.0.3',
+    name = "Gamwo",
+    packages = ['gamwo'],
+    version = '0.0.4',
     description = 'Simple python framework for 2d games',
     long_description= 'There isnt much to say about this package',
     long_description_content_type='text/markdown',
