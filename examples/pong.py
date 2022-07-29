@@ -2,7 +2,7 @@ from gamwo import *
 import random
 
 
-screen = Gamwo("Pong", 800, 600, target_fps=60)
+screen = Gamwo("Pong", 800, 600)
 
 class Ball(Entity):
         def __init__(self, window):
@@ -19,8 +19,10 @@ class Ball(Entity):
             if self.top <= 0 or self.bottom >= self.window.height:
                 self.ballSpeedY *= -1
             if self.left <= 0:
+                player.player_counter += 1
                 self.respawn()
             elif self.right >= self.window.width:
+                opponent.opponent_counter += 1
                 self.respawn()
 
             if self.checkCollision(player) or self.checkCollision(opponent):
@@ -41,6 +43,9 @@ class Paddle(Entity):
 
             self.window = window
             self.player = player
+
+            self.player_counter = 0
+            self.opponent_counter = 0
 
         def movement(self, dt):
             if self.player == 'player':
@@ -65,6 +70,11 @@ opponent = Paddle(screen, 'opponent')
 
 @screen.draw
 def draw():
+        player_text = Text(screen, "Player: " + str(player.player_counter), "Arial", 20, screen.width / 2 + 20, screen.height / 2 - 10, "cyan").show()
+        opponent_text = Text(screen, "Opponent: " + str(opponent.opponent_counter), "Arial", 20, screen.width / 2 + 20, screen.height / 2 + 10, "cyan").show()
+
+        Line(screen, (screen.width / 2, 0), (screen.width / 2, screen.height), "white")
+
         Text(screen, f"FPS: {str(int(screen.getFPS()))}").show()
         ball.show()
         player.show()
