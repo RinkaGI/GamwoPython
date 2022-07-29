@@ -5,3 +5,4 @@ Remember, there is github wiki.
 
 TODO:
   - More examples
+  - Add timers
