@@ -1,7 +1,7 @@
 import pygame, sys
 
 class Text:
-    def __init__(self, window, text: str, fontFile = None, fontSize: int = 20, x = 0, y = 0, color = "white") -> None:
+    def __init__(self, window, text: str, fontFile: str = None, fontSize: int = 20, x = 0, y = 0, color = "white") -> None:
         self.window = window
         self.text = text
         self.fontFile = fontFile
