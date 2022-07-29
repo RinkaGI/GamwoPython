@@ -10,3 +10,4 @@ TODO:
   - Add animations
   - Add group sprites
   - Add tilemaps
+  - Add a camera
