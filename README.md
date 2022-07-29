@@ -14,3 +14,4 @@ TODO:
   - Add particles
   - Add support for external visual tilemaps editor
   - Add scenes
+  - Add text input
