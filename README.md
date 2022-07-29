@@ -12,3 +12,4 @@ TODO:
   - Add tilemaps
   - Add a camera
   - Add particles
+  - Add support for external visual tilemaps editor
