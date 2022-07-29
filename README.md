@@ -13,3 +13,4 @@ TODO:
   - Add a camera
   - Add particles
   - Add support for external visual tilemaps editor
+  - Add scenes
