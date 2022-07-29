@@ -8,3 +8,4 @@ TODO:
   - Add timers
   - Add rotation
   - Add Vector2
+  - Add animations
