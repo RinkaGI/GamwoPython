@@ -36,6 +36,8 @@ class Gamwo:
 
         self.input = Input()
 
+        self.current_time = 0
+
         self.update_deltatime = 0
         self.draw_handlers = []
         self.update_handlers = []
@@ -65,9 +67,11 @@ class Gamwo:
             for e in pygame.event.get():
                 if e.type == pygame.QUIT:
                     pygame.quit()
-                    sys.exit(0)
+                    sys.exit()
 
             self.input.update()
+
+            self.current_time = pygame.time.get_ticks()
 
             self._update(self.dt)
             self.changeBackgroundColor("black")
@@ -83,3 +87,5 @@ class Gamwo:
     def update(self, handler):
         self.update_handlers.append(handler)
         return handler
+
+        
