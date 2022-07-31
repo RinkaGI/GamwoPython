@@ -9,7 +9,7 @@ class Sprite:
         self.width = width
         self.height = height
 
-        self.image = pygame.image.load(self.picture)
+        self.image = pygame.image.load(self.picture).convert()
         self.rect = pygame.Rect(0, 0, 0, 0)
 
         if width != None and height != None:
@@ -18,6 +18,10 @@ class Sprite:
     def show(self):
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
         self.window.window.blit(self.image, (self.x, self.y))
+
+    def rotate(self, angle):
+        self.image = pygame.transform.scale(self.image, (self.width, self.height))
+        self.image = pygame.transform.rotate(self.image, angle)
 
     def getWidth(self):
         return self.image.get_width()
