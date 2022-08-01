@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name = "Gamwo",
     packages = ['gamwo'],
-    version = '0.1.1',
+    version = '0.1.2',
     description = 'Simple python framework for 2d games',
     long_description= 'There isnt much to say about this package',
     long_description_content_type='text/markdown',
